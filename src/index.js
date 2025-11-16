@@ -5,7 +5,7 @@ const pingCommand = require("./commands/ping.js");
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-client.once("ready", async () => {
+client.once("clientReady", async () => {
     console.log(`Logged in as ${client.user.tag}`);
 
     const clientId = client.user.id;
